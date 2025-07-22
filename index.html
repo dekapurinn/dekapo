@@ -4,12 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dekapurin Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg-animation"></div>
-  <div class="grid-overlay"></div>
-  
   <nav>
     <ul>
       <li><a href="#overview">概要</a></li>
@@ -18,7 +15,7 @@
       <li><a href="#sns">各種SNS</a></li>
     </ul>
   </nav>
-
+  
   <header id="overview">
     <div class="floating-element"></div>
     <div class="floating-element"></div>
@@ -29,35 +26,35 @@
     </button>
     <div class="scroll-indicator"></div>
   </header>
-
+  
   <section id="personal-work">
     <h2>個人制作</h2>
     <div class="work-gallery">
       <div class="work" onclick="openModal('modal1')">
-        <img src="images/work1.jpg" alt="作品1" />
+        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Project+1" alt="作品1" />
         <h3>インタラクティブWebアプリ</h3>
       </div>
       <div class="work" onclick="openModal('modal2')">
-        <img src="images/work2.jpg" alt="作品2" />
+        <img src="https://via.placeholder.com/400x250/764ba2/ffffff?text=Project+2" alt="作品2" />
         <h3>3Dビジュアライゼーション</h3>
       </div>
     </div>
   </section>
-
+  
   <section id="achievements">
     <h2>実績</h2>
     <div class="work-gallery">
       <div class="work" onclick="openModal('modal3')">
-        <img src="images/work3.jpg" alt="実績1" />
+        <img src="https://via.placeholder.com/400x250/f093fb/ffffff?text=Achievement+1" alt="実績1" />
         <h3>企業向けWebサイト制作</h3>
       </div>
       <div class="work" onclick="openModal('modal4')">
-        <img src="images/work4.jpg" alt="実績2" />
+        <img src="https://via.placeholder.com/400x250/4facfe/ffffff?text=Achievement+2" alt="実績2" />
         <h3>モバイルアプリUI/UX</h3>
       </div>
     </div>
   </section>
-
+  
   <section id="sns">
     <h2>各種SNS</h2>
     <div class="sns-links">
@@ -66,36 +63,79 @@
       <a href="https://dribbble.com/your_handle" target="_blank">Dribbble</a>
     </div>
   </section>
-
+  
   <!-- モーダル -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal1')">&times;</span>
       <h3>インタラクティブWebアプリ</h3>
+      <div class="modal-gallery">
+        <div class="main-image">
+          <img id="modal1-main" src="https://via.placeholder.com/600x400/667eea/ffffff?text=Main+Image" alt="メイン画像">
+        </div>
+        <div class="thumbnail-list">
+          <img src="https://via.placeholder.com/150x100/667eea/ffffff?text=Image+1" alt="画像1" onclick="changeMainImage('modal1', this.src)">
+          <img src="https://via.placeholder.com/150x100/5a67d8/ffffff?text=Image+2" alt="画像2" onclick="changeMainImage('modal1', this.src)">
+          <img src="https://via.placeholder.com/150x100/4c51bf/ffffff?text=Image+3" alt="画像3" onclick="changeMainImage('modal1', this.src)">
+          <img src="https://via.placeholder.com/150x100/3730a3/ffffff?text=Image+4" alt="画像4" onclick="changeMainImage('modal1', this.src)">
+        </div>
+      </div>
       <p>React.jsとThree.jsを使用したインタラクティブな3Dウェブアプリケーション。ユーザーの操作に応じてリアルタイムで変化するビジュアルエフェクトが特徴です。</p>
     </div>
   </div>
-
+  
   <div id="modal2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal2')">&times;</span>
       <h3>3Dビジュアライゼーション</h3>
+      <div class="modal-gallery">
+        <div class="main-image">
+          <img id="modal2-main" src="https://via.placeholder.com/600x400/764ba2/ffffff?text=Main+Image" alt="メイン画像">
+        </div>
+        <div class="thumbnail-list">
+          <img src="https://via.placeholder.com/150x100/764ba2/ffffff?text=3D+View+1" alt="3D画像1" onclick="changeMainImage('modal2', this.src)">
+          <img src="https://via.placeholder.com/150x100/68459a/ffffff?text=3D+View+2" alt="3D画像2" onclick="changeMainImage('modal2', this.src)">
+          <img src="https://via.placeholder.com/150x100/553c7b/ffffff?text=3D+View+3" alt="3D画像3" onclick="changeMainImage('modal2', this.src)">
+        </div>
+      </div>
       <p>WebGLを活用したデータビジュアライゼーションプロジェクト。複雑なデータセットを美しい3D空間で表現し、直感的な理解を促進します。</p>
     </div>
   </div>
-
+  
   <div id="modal3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal3')">&times;</span>
       <h3>企業向けWebサイト制作</h3>
+      <div class="modal-gallery">
+        <div class="main-image">
+          <img id="modal3-main" src="https://via.placeholder.com/600x400/f093fb/ffffff?text=Website+Main" alt="メイン画像">
+        </div>
+        <div class="thumbnail-list">
+          <img src="https://via.placeholder.com/150x100/f093fb/ffffff?text=Homepage" alt="ホームページ" onclick="changeMainImage('modal3', this.src)">
+          <img src="https://via.placeholder.com/150x100/e879f9/ffffff?text=About+Page" alt="アバウトページ" onclick="changeMainImage('modal3', this.src)">
+          <img src="https://via.placeholder.com/150x100/d946ef/ffffff?text=Contact" alt="コンタクト" onclick="changeMainImage('modal3', this.src)">
+          <img src="https://via.placeholder.com/150x100/c026d3/ffffff?text=Mobile+View" alt="モバイル表示" onclick="changeMainImage('modal3', this.src)">
+        </div>
+      </div>
       <p>モダンなデザインとユーザビリティを重視した企業向けWebサイト。レスポンシブデザインとアクセシビリティに配慮した設計を行いました。</p>
     </div>
   </div>
-
+  
   <div id="modal4" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal4')">&times;</span>
       <h3>モバイルアプリUI/UX</h3>
+      <div class="modal-gallery">
+        <div class="main-image">
+          <img id="modal4-main" src="https://via.placeholder.com/400x600/4facfe/ffffff?text=App+Screen+1" alt="メイン画像">
+        </div>
+        <div class="thumbnail-list">
+          <img src="https://via.placeholder.com/100x150/4facfe/ffffff?text=Login" alt="ログイン画面" onclick="changeMainImage('modal4', this.src)">
+          <img src="https://via.placeholder.com/100x150/06b6d4/ffffff?text=Dashboard" alt="ダッシュボード" onclick="changeMainImage('modal4', this.src)">
+          <img src="https://via.placeholder.com/100x150/0891b2/ffffff?text=Profile" alt="プロフィール" onclick="changeMainImage('modal4', this.src)">
+          <img src="https://via.placeholder.com/100x150/0e7490/ffffff?text=Settings" alt="設定" onclick="changeMainImage('modal4', this.src)">
+        </div>
+      </div>
       <p>ユーザー体験を最重要視したモバイルアプリケーションのUI/UXデザイン。使いやすさと美しさを両立させたインターフェースデザインです。</p>
     </div>
   </div>
