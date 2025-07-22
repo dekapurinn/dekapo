@@ -2,111 +2,103 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dekapurin 3DCG Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dekapurin Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="modal.css" />
-  <style> html { scroll-behavior: smooth; } </style>
 </head>
 <body>
-
+  <div class="bg-animation"></div>
+  <div class="grid-overlay"></div>
+  
   <nav>
     <ul>
-      <li><a href="#about">概要</a></li>
-      <li><a href="#works">個人制作</a></li>
+      <li><a href="#overview">概要</a></li>
+      <li><a href="#personal-work">個人制作</a></li>
       <li><a href="#achievements">実績</a></li>
-      <li><a href="#contact">SNS</a></li>
+      <li><a href="#sns">各種SNS</a></li>
     </ul>
   </nav>
 
-  <header id="hero" class="fade-in">
-    <h1>Dekapurin 3DCG Portfolio</h1>
-    <p>ようこそ、3DCGとロボットを愛する表現者のポートフォリオへ。</p>
+  <header id="overview">
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <h1 id="site-title">Dekapurin</h1>
+    <p class="subtitle">クリエイティブな作品と革新的なアイデアで、デジタルの可能性を探求するクリエイター</p>
+    <button class="cta-button" onclick="document.getElementById('personal-work').scrollIntoView({behavior: 'smooth'})">
+      作品を見る
+    </button>
+    <div class="scroll-indicator"></div>
   </header>
 
-  <section id="about" class="fade-in">
-    <h2>概要</h2>
-    <p>
-      私はBlenderを中心に、アニメーション、スカルプト、ハードサーフェスなどを活かして作品制作をしています。<br>
-      このページでは、個人制作や実績、SNSなどをまとめています。
-    </p>
-  </section>
-
-  <section id="works" class="fade-in">
+  <section id="personal-work">
     <h2>個人制作</h2>
     <div class="work-gallery">
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work1.jpg" alt="作品1" />
-        </div>
-        <h3>作品タイトル1</h3>
-        <p>作品の説明1</p>
-        <a href="#">詳細を見る</a>
+      <div class="work" onclick="openModal('modal1')">
+        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Project+1" alt="作品1" />
+        <h3>インタラクティブWebアプリ</h3>
       </div>
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work2.jpg" alt="作品2" />
-        </div>
-        <h3>作品タイトル2</h3>
-        <p>作品の説明2</p>
-        <a href="#">詳細を見る</a>
-      </div>
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work3.jpg" alt="作品3" />
-        </div>
-        <h3>作品タイトル3</h3>
-        <p>作品の説明3</p>
-        <a href="#">詳細を見る</a>
-      </div>
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work4.jpg" alt="作品4" />
-        </div>
-        <h3>作品タイトル4</h3>
-        <p>作品の説明4</p>
-        <a href="#">詳細を見る</a>
-      </div>
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work5.jpg" alt="作品5" />
-        </div>
-        <h3>作品タイトル5</h3>
-        <p>作品の説明5</p>
-        <a href="#">詳細を見る</a>
-      </div>
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work6.jpg" alt="作品6" />
-        </div>
-        <h3>作品タイトル6</h3>
-        <p>作品の説明6</p>
-        <a href="#">詳細を見る</a>
+      <div class="work" onclick="openModal('modal2')">
+        <img src="https://via.placeholder.com/400x250/764ba2/ffffff?text=Project+2" alt="作品2" />
+        <h3>3Dビジュアライゼーション</h3>
       </div>
     </div>
   </section>
 
-  <section id="achievements" class="fade-in">
+  <section id="achievements">
     <h2>実績</h2>
-    <ul>
-      <li>2023年：「○○コンテスト」入賞</li>
-      <li>2024年：展示会「●●展」参加</li>
-      <li>2025年：ロボットフェス出展予定</li>
-    </ul>
+    <div class="work-gallery">
+      <div class="work" onclick="openModal('modal3')">
+        <img src="https://via.placeholder.com/400x250/f093fb/ffffff?text=Achievement+1" alt="実績1" />
+        <h3>企業向けWebサイト制作</h3>
+      </div>
+      <div class="work" onclick="openModal('modal4')">
+        <img src="https://via.placeholder.com/400x250/4facfe/ffffff?text=Achievement+2" alt="実績2" />
+        <h3>モバイルアプリUI/UX</h3>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="fade-in">
+  <section id="sns">
     <h2>各種SNS</h2>
-    <ul>
-      <li><a href="https://twitter.com/yourhandle" target="_blank">Twitter</a></li>
-      <li><a href="https://instagram.com/yourhandle" target="_blank">Instagram</a></li>
-      <li><a href="mailto:yourmail@example.com">Email</a></li>
-    </ul>
+    <div class="sns-links">
+      <a href="https://twitter.com/your_handle" target="_blank">Twitter</a>
+      <a href="https://github.com/your_handle" target="_blank">GitHub</a>
+      <a href="https://dribbble.com/your_handle" target="_blank">Dribbble</a>
+    </div>
   </section>
 
-  <footer class="fade-in">
-    <p>&copy; 2025 Dekapurin</p>
-  </footer>
+  <!-- モーダル -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h3>インタラクティブWebアプリ</h3>
+      <p>React.jsとThree.jsを使用したインタラクティブな3Dウェブアプリケーション。ユーザーの操作に応じてリアルタイムで変化するビジュアルエフェクトが特徴です。</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h3>3Dビジュアライゼーション</h3>
+      <p>WebGLを活用したデータビジュアライゼーションプロジェクト。複雑なデータセットを美しい3D空間で表現し、直感的な理解を促進します。</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h3>企業向けWebサイト制作</h3>
+      <p>モダンなデザインとユーザビリティを重視した企業向けWebサイト。レスポンシブデザインとアクセシビリティに配慮した設計を行いました。</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h3>モバイルアプリUI/UX</h3>
+      <p>ユーザー体験を最重要視したモバイルアプリケーションのUI/UXデザイン。使いやすさと美しさを両立させたインターフェースデザインです。</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
