@@ -14,7 +14,7 @@ body {
   background-image:
     repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255, 255, 255, 0.8) 60px),
     repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255, 255, 255, 0.8) 60px);
-  background-size: 60px 60px;
+  background-size: 30px 30px;
   background-attachment: fixed;
   overflow-x: hidden;
 }
